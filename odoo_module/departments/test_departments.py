@@ -1,6 +1,9 @@
+import pytest
+
 from odoo_module.odoo_test import OdooTest
 
 
+@pytest.mark.department
 class DepartmentTest(OdooTest):
     model = "hr.department"
 

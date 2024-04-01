@@ -25,3 +25,15 @@ def create_department():
     yield department_id
 
     entity.delete(department_id)
+
+
+@pytest.fixture()
+def create_job_position():
+    new_job_position = [{'name': "New Job Position from fixture"}]
+    entity = OdooEntity("hr.job")
+
+    job_position_id = entity.create(new_job_position)
+
+    yield job_position_id
+
+    entity.delete(job_position_id)
