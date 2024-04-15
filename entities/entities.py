@@ -40,5 +40,5 @@ class OdooEntity:
             record_ids = [record_ids]
         logger.debug("Deleting '%s' records with ids %s", self.model, record_ids)
         result = self.client.execute_kw(self.model, 'unlink', record_ids)
-        logger.debug("Deleted '%' record with id %s", record_ids)
+        logger.debug("Deleted records with ids %s", record_ids)
         return result
